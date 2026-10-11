@@ -1,0 +1,12 @@
+{
+ "name": "resnet18_base",
+ "model": "resnet18",
+ "pretrained": true,
+ "planes": ["sag", "cor"],
+ "lr": 3e-4,
+ "bb_lr_mult": 0.1,
+ "freeze_epochs": 2,
+ "batch_size": 4,
+ "epochs": 25,
+ "patience": 8
+}

@@ -1,0 +1,15 @@
+{
+ "_doc": "Ablación v1 (Fase 5). Cada corrida cambia un solo factor respecto de resnet18_base (notebook 03). La referencia no se repite aquí; las semillas 1 y 2 miden la variación por azar.",
+ "runs": [
+  {"name": "r18_sag",      "config": "resnet18_base", "set": {"planes": ["sag"]},   "factor": "plano"},
+  {"name": "r18_cor",      "config": "resnet18_base", "set": {"planes": ["cor"]},   "factor": "plano"},
+  {"name": "r18_focal",    "config": "resnet18_base", "set": {"loss": "focal"},     "factor": "pérdida"},
+  {"name": "r18_conf",     "config": "resnet18_base", "set": {"noise": "conf"},     "factor": "ruido"},
+  {"name": "r18_highconf", "config": "resnet18_base", "set": {"noise": "highconf"}, "factor": "ruido"},
+  {"name": "r18_nopw",     "config": "resnet18_base", "set": {"pos_weight": "none"}, "factor": "desbalance"},
+  {"name": "r50",          "config": "resnet18_base", "set": {"model": "resnet50"}, "factor": "profundidad"},
+  {"name": "r18_seed1",    "config": "resnet18_base", "set": {"seed": 1},           "factor": "semilla"},
+  {"name": "r18_seed2",    "config": "resnet18_base", "set": {"seed": 2},           "factor": "semilla"},
+  {"name": "scratch_v2",   "config": "scratch_base",  "set": {"lr": 0.003, "epochs": 60, "patience": 15, "dropout": 0.1}, "factor": "cnn propia (subajuste)"}
+ ]
+}

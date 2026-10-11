@@ -1,0 +1,13 @@
+data/
+outputs/
+*.csv
+*.dcm
+*.png
+*.npy
+*.pt
+*.pth
+*.ckpt
+.venv/
+__pycache__/
+.DS_Store
+*.zip
