@@ -1,0 +1,4 @@
+# Entorno en el que corrieron los notebooks 02 a 05 (imagen de Kaggle, GPU T4, octubre de 2026).
+# Kaggle ya trae estos paquetes; el archivo solo deja registradas las versiones.
+torch==2.11.0+cu128
+torchvision==0.26.0

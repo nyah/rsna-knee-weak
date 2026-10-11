@@ -1,0 +1,28 @@
+{
+ "_doc": "Recursos de Kaggle que usa run_all.sh. Los notebooks se suben como versiones nuevas de estos slugs (privados) y se encadenan por sus outputs.",
+ "owner": "juanjospinoreyes",
+ "competition": "rsna-knee-abnormality-detection",
+ "weak_labels_dataset": "rsna-knee-weak-labels-v1",
+ "notebooks": [
+  {"key": "01", "slug": "01-eda-rsna-knee", "title": "01_eda_rsna_knee",
+   "file": "notebooks/01_eda_rsna_knee.ipynb", "gpu": false, "competition": true,
+   "kernels": [], "datasets": [],
+   "download": "(study_lang|series_catalog)\\.csv$"},
+  {"key": "02", "slug": "02-subset-rsna-knee", "title": "02_subset_rsna_knee",
+   "file": "notebooks/02_subset_rsna_knee.ipynb", "gpu": false, "competition": true,
+   "kernels": ["01"], "datasets": ["weak_labels"],
+   "download": "(subset_studies|prevalence_subset|subset_by_lang|subset_by_manufacturer|conversion_errors)\\.csv$"},
+  {"key": "03", "slug": "03-train-rsna-knee", "title": "03_train_rsna_knee",
+   "file": "notebooks/03_train_rsna_knee.ipynb", "gpu": true,
+   "kernels": ["02"], "datasets": [],
+   "download": "(metrics\\.json|history\\.csv|preds_val\\.csv|preds_test\\.csv|summary\\.csv)$"},
+  {"key": "04", "slug": "04-ablation-rsna-knee", "title": "04_ablation_rsna_knee",
+   "file": "notebooks/04_ablation_rsna_knee.ipynb", "gpu": true,
+   "kernels": ["02"], "datasets": [],
+   "download": "(metrics\\.json|history\\.csv|preds_val\\.csv|preds_test\\.csv|summary_ablation\\.csv)$"},
+  {"key": "05", "slug": "05-gradcam-rsna-knee", "title": "05_gradcam_rsna_knee",
+   "file": "notebooks/05_gradcam_rsna_knee.ipynb", "gpu": true,
+   "kernels": ["02", "03"], "datasets": [],
+   "download": "\\.(png|csv)$"}
+ ]
+}
